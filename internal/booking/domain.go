@@ -1,5 +1,12 @@
 package booking
 
+import "errors"
+
+// Common error types
+var (
+	ErrSeatAlreadyBooked = errors.New("This seat is already taken")
+)
+
 // Booking struct represents a confirmed seat booking.
 type Booking struct {
 	ID      string
