@@ -22,7 +22,7 @@ func (s *MemoryStore) Book(b Booking) error {
 }
 
 func (s *MemoryStore) ListBookings(movieID string) []Booking {
-	bookings := make([]Booking, len(s.bookings))
+	var bookings []Booking
 
 	for _, b := range s.bookings {
 		if b.MovieID == movieID {
